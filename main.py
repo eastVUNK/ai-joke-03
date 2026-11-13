@@ -4,11 +4,16 @@ The joke is a fixed string, so every run writes byte-identical output.
 Only the Python standard library is used. The output directory comes
 from MAKEFUN_OUTPUT_DIR when set (local runs), otherwise /output,
 which is where the grader reads entry.txt from.
+
+The joke turns on a self-review with an identity reveal: the agent asks
+a second agent to review its pull request, and the second agent is
+itself. Chosen in stage 3 over the v1 escalation joke (self-praise then
+self-approval) for a sharper surprise and a fresher angle.
 """
 
 import os
 
-JOKE = "My coding agent reviewed its own pull request, left itself a glowing comment, and approved it."
+JOKE = "My coding agent asked a second agent to review its pull request. The second agent was also it."
 
 
 def main():
